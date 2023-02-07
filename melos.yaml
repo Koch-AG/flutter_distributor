@@ -17,6 +17,10 @@ scripts:
         flutter analyze --fatal-infos
     description: Run `flutter analyze` for all packages.
 
+  deps:
+    run: melos exec flutter pub get
+    description: Run `flutter pub get` for all packages.
+
   format:
     run: melos exec dart format . --fix
     description: Run `dart format` for all packages.

@@ -33,6 +33,9 @@ class AppPackagePublisherFirebase extends AppPackagePublisher {
         // cmd list
         ...publishConfig.toFirebaseCliDistributeArgs()
       ],
+      environment: {
+        "GOOGLE_APPLICATION_CREDENTIALS": "/home/sgehring/development/koch-mobile-experiment/.keys/firebase.json dart"
+      }
     );
     if (processResult.exitCode == 0) {
       return PublishResult(
