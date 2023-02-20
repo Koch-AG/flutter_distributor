@@ -55,6 +55,7 @@ class AppBuilder {
     ProcessResult processResult = await $(
       'flutter',
       ['build', buildSubcommand]..addAll(arguments),
+      allowCustomization: true,
     );
 
     if (processResult.exitCode != 0) {

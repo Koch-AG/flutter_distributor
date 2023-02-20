@@ -60,6 +60,7 @@ class AppPackageMakerMsix extends AppPackageMaker {
     await $(
       'flutter',
       ['pub', 'run', 'msix:create']..addAll(arguments),
+      allowCustomization: true,
     );
     return MakeResult(makeConfig);
   }

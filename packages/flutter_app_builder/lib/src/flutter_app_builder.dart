@@ -20,7 +20,7 @@ class FlutterAppBuilder {
   ];
 
   Future<void> clean() async {
-    await $('flutter', ['clean']);
+    await $('flutter', ['clean'], allowCustomization: true);
   }
 
   Future<BuildResult> build(

@@ -353,6 +353,7 @@ class FlutterDistributor {
     await $(
       'dart',
       ['pub', 'global', 'activate', 'flutter_distributor'],
+      allowCustomization: true,
     );
     return Future.value();
   }
